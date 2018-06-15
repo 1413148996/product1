@@ -1,4 +1,5 @@
 var oLi = document.getElementsByTagName("li");
+var oBox = document.getElementById("box");
 for(var i=0;i<oLi.length;i++){
     oLi[i].index = i;
     oLi[i].onclick = function(){
@@ -8,4 +9,8 @@ for(var i=0;i<oLi.length;i++){
         }
         oLi[this.index].className="active";
     }
+    for(var i=0;i<oBox.length;i++){
+        oBox[i].style.display = "none";
+    }
+    oBox[this.index].style.display = "block";
 }
