@@ -1,11 +1,10 @@
-var oLi = document.getElementsByTagName("li");
-for(var i=0;i<oLi.length;i++){
-    oLi[i].index = i;
-    oLi[i].onclick = function(){
-        console.log(this.index);
-        for(var j=0;j<oLi.length;i++){
-        	oLi[i].className="";
-        }
-        oLi[this.index].className="active";
+let olist = document.querySelector(".list"); 
+let obox = document.querySelector(".box");
+
+let btn = obox.querySelectorAll("li");
+
+btn.forEach((item,index) =>{
+    item.onclick = ()=>{
+        console.log(index)
     }
-}
+})
